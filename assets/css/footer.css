@@ -1,0 +1,12 @@
+footer {
+  display: flex;
+  justify-content: flex-start;
+  background-color: dimgray;
+  height: 2rem; }
+  footer .links {
+    margin-left: 1rem;
+    align-self: center; }
+  footer a {
+    text-decoration: none;
+    color: white;
+    padding: 5px; }
