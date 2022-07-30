@@ -3,9 +3,10 @@ header {
   display: flex;
   justify-content: space-between;
   background-color: blue;
-  color: whitesmoke; }
+  color: whitesmoke;
+  box-shadow: 1px 1px 1px 1px lightgrey; }
   header #app-name {
-    font-size: larger;
+    font-size: 1.4rem;
     padding-left: 5px;
     font-weight: bold;
     align-self: end; }
