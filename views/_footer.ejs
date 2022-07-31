@@ -6,9 +6,15 @@
         <a href="/">
             Home
         </a>
-        <a href="/users/profile">
+        <% if(locals.user){ %>
+        <a href="/users/profile/<%= user.id %>">
             Profile
         </a>
+        <% }else{ %>
+            <a href="/users/sign-in">
+                Profile
+            </a>
+        <% } %>
     </section>
 
 </footer>
