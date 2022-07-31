@@ -1,5 +1,5 @@
 const User = require("../models/user");
-
+//let's keep it same as before as only one callback function
 module.exports.profile= function(req,res){
     // return res.end('<h1>User Profile</h1>');
     User.findById(req.params.id,function(err,user){
