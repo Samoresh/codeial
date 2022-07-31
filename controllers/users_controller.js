@@ -14,6 +14,7 @@ module.exports.profile= function(req,res){
 module.exports.update= function(req,res){
     if(req.user.id == req.params.id){
         User.findByIdAndUpdate(req.params.id,req.body,function(err,user){
+            req.flash('success','User Details Updated!');
             return res.redirect('back');
         });
     }else{
@@ -57,7 +58,7 @@ module.exports.create= function(req,res){
         if(!user){
             User.create(req.body, function(err,user){
                 if(err){console.log('error in creating user while signing up'); return;}
-
+                req.flash('success','Account created');
                 return res.redirect('/users/sign-in');
             });
         }else{
