@@ -15,6 +15,7 @@ module.exports.create = async function(req, res){
             post.save();
             req.flash('success','Comment created');
             res.redirect('/');
+            // return res.redirect('back');
         }
     }catch(err){
         // console.log('Error:',err);
@@ -34,6 +35,7 @@ module.exports.destroy= async function(req,res){
             req.flash('success','Comment deleted');
             return res.redirect('back');
         }else{
+            req.flash('error', 'Unauthorized');
             return res.redirect('back');
         }
     }catch(err){
