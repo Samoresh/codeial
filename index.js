@@ -23,6 +23,9 @@ app.use(sassMiddleware({
     prefix: '/css'
 }));
 app.use(express.static('./assets'));
+//make the uploads path available to the browser
+app.use('/uploads',express.static(__dirname + '/uploads'));
+
 app.use(expressLayouts);
 app.use(bodyParser.urlencoded({extended: false}));
 // app.use(cookieParser());//cookie-parser no longer required for module express-session
